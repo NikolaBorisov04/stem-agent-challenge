@@ -1,0 +1,19 @@
+{
+  "persona": "Security Auditor",
+  "tools": [
+    "endpoint_mapper",
+    "auth_analyzer",
+    "payload_fuzz_tester"
+  ],
+  "focus_areas": [
+    "authentication",
+    "authorization",
+    "input_validation"
+  ],
+  "techniques": [
+    "black_box_testing",
+    "fuzzing",
+    "token_replay"
+  ],
+  "output_format": "audit_report"
+}

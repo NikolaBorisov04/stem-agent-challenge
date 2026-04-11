@@ -1,0 +1,97 @@
+{
+  "total_tests": 3,
+  "successful_runs": 3,
+  "success_rate": 1.0,
+  "avg_specialization_quality": 0.25,
+  "avg_safeguard_confidence": 1.0,
+  "avg_execution_time_seconds": 8.638699849446614e-05,
+  "detailed_results": [
+    {
+      "test_id": "tc_001",
+      "test_name": "E-commerce API",
+      "differentiation_success": true,
+      "execution_time_seconds": 0.00012373924255371094,
+      "specialization_quality": 0.25,
+      "safeguard_confidence": 1.0,
+      "safeguard_issues": [],
+      "safeguard_recommendations": [],
+      "generated_config": {
+        "persona": "Security Auditor",
+        "tools": [
+          "endpoint_mapper",
+          "auth_analyzer",
+          "payload_fuzz_tester"
+        ],
+        "focus_areas": [
+          "authentication",
+          "authorization",
+          "input_validation"
+        ],
+        "techniques": [
+          "black_box_testing",
+          "fuzzing",
+          "token_replay"
+        ],
+        "output_format": "audit_report"
+      }
+    },
+    {
+      "test_id": "tc_002",
+      "test_name": "Financial Transaction API",
+      "differentiation_success": true,
+      "execution_time_seconds": 6.961822509765625e-05,
+      "specialization_quality": 0.25,
+      "safeguard_confidence": 1.0,
+      "safeguard_issues": [],
+      "safeguard_recommendations": [],
+      "generated_config": {
+        "persona": "Security Auditor",
+        "tools": [
+          "endpoint_mapper",
+          "auth_analyzer",
+          "payload_fuzz_tester"
+        ],
+        "focus_areas": [
+          "authentication",
+          "authorization",
+          "input_validation"
+        ],
+        "techniques": [
+          "black_box_testing",
+          "fuzzing",
+          "token_replay"
+        ],
+        "output_format": "audit_report"
+      }
+    },
+    {
+      "test_id": "tc_003",
+      "test_name": "GraphQL API",
+      "differentiation_success": true,
+      "execution_time_seconds": 6.580352783203125e-05,
+      "specialization_quality": 0.25,
+      "safeguard_confidence": 1.0,
+      "safeguard_issues": [],
+      "safeguard_recommendations": [],
+      "generated_config": {
+        "persona": "Security Auditor",
+        "tools": [
+          "endpoint_mapper",
+          "auth_analyzer",
+          "payload_fuzz_tester"
+        ],
+        "focus_areas": [
+          "authentication",
+          "authorization",
+          "input_validation"
+        ],
+        "techniques": [
+          "black_box_testing",
+          "fuzzing",
+          "token_replay"
+        ],
+        "output_format": "audit_report"
+      }
+    }
+  ]
+}

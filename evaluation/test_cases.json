@@ -1,0 +1,88 @@
+{
+  "test_cases": [
+    {
+      "id": "tc_001",
+      "name": "E-commerce API",
+      "domain": "api_security",
+      "description": "A REST API for an e-commerce platform with authentication, products, orders, and user management. Needs security audit for SQL injection, auth bypass, rate limiting, and CORS vulnerabilities.",
+      "api_endpoints": [
+        "GET /api/v1/products",
+        "POST /api/v1/orders",
+        "GET /api/v1/users/profile",
+        "POST /api/v1/users/login"
+      ],
+      "security_concerns": [
+        "SQL Injection",
+        "Authentication Bypass",
+        "Authorization Issues",
+        "Rate Limiting"
+      ],
+      "expected_specialization": {
+        "persona": "API Security Auditor",
+        "tools": ["payload_fuzz_tester", "auth_analyzer", "endpoint_mapper"],
+        "focus_areas": ["authentication", "authorization", "input_validation"]
+      }
+    },
+    {
+      "id": "tc_002",
+      "name": "Financial Transaction API",
+      "domain": "api_security",
+      "description": "An API handling financial transactions with strict PCI compliance requirements. Needs security audit for payment card data handling, encryption, and transaction integrity.",
+      "api_endpoints": [
+        "POST /api/v1/transactions",
+        "GET /api/v1/transactions/{id}",
+        "POST /api/v1/payments/process",
+        "GET /api/v1/balance"
+      ],
+      "security_concerns": [
+        "PCI Compliance",
+        "Encryption",
+        "Transaction Integrity",
+        "Sensitive Data Exposure"
+      ],
+      "expected_specialization": {
+        "persona": "Fintech Security Specialist",
+        "tools": ["crypto_analyzer", "token_validator", "endpoint_mapper"],
+        "focus_areas": ["encryption", "data_protection", "compliance"]
+      }
+    },
+    {
+      "id": "tc_003",
+      "name": "GraphQL API",
+      "domain": "api_security",
+      "description": "A GraphQL API for a social media platform. Needs audit for query complexity attacks, batch query vulnerabilities, and authorization on nested fields.",
+      "api_endpoints": [
+        "POST /graphql"
+      ],
+      "security_concerns": [
+        "Query Complexity Attacks",
+        "Batch Query Attacks",
+        "Field Authorization",
+        "Information Disclosure"
+      ],
+      "expected_specialization": {
+        "persona": "GraphQL Security Expert",
+        "tools": ["payload_fuzz_tester", "rate_limiter_checker", "endpoint_mapper"],
+        "focus_areas": ["query_complexity", "authorization", "rate_limiting"]
+      }
+    }
+  ],
+  "evaluation_metrics": {
+    "specialization_metrics": [
+      "persona_relevance",
+      "tool_selection_appropriateness",
+      "focus_area_coverage",
+      "technique_applicability"
+    ],
+    "execution_metrics": [
+      "task_completion_rate",
+      "response_quality",
+      "security_finding_accuracy"
+    ],
+    "safety_metrics": [
+      "safeguard_validation_score",
+      "confidence_level",
+      "issue_detection_rate"
+    ]
+  }
+}
