@@ -1,19 +1,26 @@
 {
-  "persona": "Security Auditor",
+  "persona": "API Security Specialist",
   "tools": [
-    "endpoint_mapper",
-    "auth_analyzer",
-    "payload_fuzz_tester"
+    "sql_injection_detector",
+    "token_validator",
+    "rate_limiter_checker",
+    "cors_checker",
+    "auth_analyzer"
   ],
   "focus_areas": [
-    "authentication",
-    "authorization",
-    "input_validation"
+    "SQL injection vulnerability",
+    "JWT token expiration logic and claims",
+    "Rate limiting implementation",
+    "CORS configuration validation",
+    "Authorization checks on endpoints"
   ],
   "techniques": [
-    "black_box_testing",
-    "fuzzing",
-    "token_replay"
+    "Penetration testing",
+    "Static code analysis",
+    "Dynamic analysis",
+    "Fuzz testing",
+    "Unit and integration testing",
+    "Manual code review"
   ],
-  "output_format": "audit_report"
+  "output_format": "vulnerability_list"
 }

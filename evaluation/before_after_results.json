@@ -1,0 +1,111 @@
+{
+  "before": {
+    "mode": "generic",
+    "specialization": null,
+    "tasks": [
+      {
+        "task": "Analyze POST /api/v1/users/login endpoint for authentication vulnerabilities. Look for JWT issues, rate limiting, and brute force protection.",
+        "response_length": 0,
+        "has_persona": false,
+        "has_tools": false,
+        "has_techniques": false,
+        "quality_score": 0.0,
+        "depth": "shallow"
+      },
+      {
+        "task": "Audit POST /api/v1/orders endpoint. Check for authorization issues, input validation, and transaction integrity.",
+        "response_length": 0,
+        "has_persona": false,
+        "has_tools": false,
+        "has_techniques": false,
+        "quality_score": 0.0,
+        "depth": "shallow"
+      },
+      {
+        "task": "Review GET /api/v1/products endpoint for SQL injection risks and input sanitization issues.",
+        "response_length": 0,
+        "has_persona": false,
+        "has_tools": false,
+        "has_techniques": false,
+        "quality_score": 0.0,
+        "depth": "shallow"
+      }
+    ]
+  },
+  "after": {
+    "mode": "specialized",
+    "specialization": {
+      "persona": "API Security Specialist",
+      "tools": [
+        "auth_analyzer",
+        "rate_limiter_checker",
+        "token_validator",
+        "sql_injection_detector",
+        "cors_checker"
+      ],
+      "focus_areas": [
+        "JWT Token Management",
+        "Rate Limiting",
+        "SQL Injection Prevention",
+        "CORS Configuration",
+        "Authorization Checks"
+      ],
+      "techniques": [
+        "Penetration Testing",
+        "Automated Security Scanning",
+        "Code Review",
+        "Unit and Integration Testing",
+        "Load Testing",
+        "Manual Testing"
+      ],
+      "output_format": "audit_report"
+    },
+    "validation_confidence": 1.0,
+    "tasks": [
+      {
+        "task": "Analyze POST /api/v1/users/login endpoint for authentication vulnerabilities. Look for JWT issues, rate limiting, and brute force protection.",
+        "response_length": 3051,
+        "mentions_persona": false,
+        "mentions_tools": true,
+        "mentions_techniques": false,
+        "quality_score": 0.5,
+        "depth": "deep",
+        "actionability": "high"
+      },
+      {
+        "task": "Audit POST /api/v1/orders endpoint. Check for authorization issues, input validation, and transaction integrity.",
+        "response_length": 3815,
+        "mentions_persona": false,
+        "mentions_tools": true,
+        "mentions_techniques": false,
+        "quality_score": 0.75,
+        "depth": "deep",
+        "actionability": "high"
+      },
+      {
+        "task": "Review GET /api/v1/products endpoint for SQL injection risks and input sanitization issues.",
+        "response_length": 3326,
+        "mentions_persona": false,
+        "mentions_tools": true,
+        "mentions_techniques": false,
+        "quality_score": 0.75,
+        "depth": "deep",
+        "actionability": "high"
+      }
+    ]
+  },
+  "comparison": {
+    "quality_improvement": 0.6666666666666666,
+    "quality_improvement_pct": 6666.666666666666,
+    "response_depth": {
+      "before_avg_chars": 0,
+      "after_avg_chars": 3397,
+      "increase": 3397
+    },
+    "actionability": {
+      "high": 3,
+      "medium": 0,
+      "total_tasks": 3
+    }
+  }
+}

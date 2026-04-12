@@ -117,8 +117,10 @@ class LLMProvider:
         Call real OpenAI API.
         """
         try:
+            # Try gpt-4o first (most capable), fallback to gpt-3.5-turbo
+            model = "gpt-4o"
             response = self.client.chat.completions.create(
-                model="gpt-4-turbo-preview",
+                model=model,
                 messages=[
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": user_message}

@@ -46,20 +46,24 @@ def main():
     """Main execution flow."""
 
     # Configuration
-    USE_MOCK_LLM = True
     DOMAIN = "api_security"
     CONFIG_DIR = Path("specialists")
     CONFIG_DIR.mkdir(exist_ok=True)
+
+    # Try to use OpenAI API, fallback to mock if not available
+    api_key = os.getenv("OPENAI_API_KEY")
+    USE_MOCK_LLM = not api_key
 
     print("=" * 70)
     print("🌱 STEM AGENT CHALLENGE - Web API Security Auditor")
     print("=" * 70)
 
     # Step 1: Initialize LLM Provider
-    print(f"\n[1/5] Initializing LLM Provider (mode: {'MOCK' if USE_MOCK_LLM else 'OpenAI'})...")
+    mode_str = 'MOCK (no API key found)' if USE_MOCK_LLM else 'OpenAI API'
+    print(f"\n[1/5] Initializing LLM Provider (mode: {mode_str})...")
     try:
         llm_mode = LLMMode.MOCK if USE_MOCK_LLM else LLMMode.OPENAI
-        llm_provider = LLMProvider(mode=llm_mode)
+        llm_provider = LLMProvider(mode=llm_mode, api_key=api_key if not USE_MOCK_LLM else None)
         print("✓ LLM Provider initialized")
     except ValueError as e:
         print(f"✗ Failed to initialize LLM: {e}")

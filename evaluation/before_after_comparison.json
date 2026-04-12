@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "domain": "api_security",
+    "evaluation_type": "vanilla_vs_specialized",
+    "tasks_count": 3
+  },
+  "before": {
+    "mode": "vanilla_llm",
+    "tasks": [
+      {
+        "task": "Analyze POST /api/v1/users/login for authentication vulnerabilities. Consider JWT issues, rate limiting, and brute force attacks.",
+        "response_length": 3899,
+        "quality_score": 1.0,
+        "depth": "deep",
+        "actionability": "high",
+        "response_preview": "When analyzing the `POST /api/v1/users/login` endpoint for authentication vulnerabilities, it's crucial to consider various aspects related to JWT (JSON Web Tokens), rate limiting, and brute force att"
+      },
+      {
+        "task": "Audit POST /api/v1/orders for authorization and data validation issues.",
+        "response_length": 3172,
+        "quality_score": 1.0,
+        "depth": "deep",
+        "actionability": "medium",
+        "response_preview": "Auditing the `POST /api/v1/orders` endpoint for authorization and data validation issues involves a systematic examination of both how the endpoint ensures that only authorized users can access it and"
+      },
+      {
+        "task": "Review GET /api/v1/products for SQL injection risks.",
+        "response_length": 2859,
+        "quality_score": 1.0,
+        "depth": "deep",
+        "actionability": "high",
+        "response_preview": "To review the `GET /api/v1/products` endpoint for SQL injection risks, it is important to understand how this endpoint interacts with the database and how it processes user input. SQL injection is a s"
+      }
+    ]
+  },
+  "after": {
+    "mode": "specialized_agent",
+    "success": true,
+    "specialization": {
+      "persona": "API Security Agent",
+      "tools": [
+        "token_validator",
+        "rate_limiter_checker",
+        "sql_injection_detector",
+        "cors_checker"
+      ],
+      "focus_areas": [
+        "JWT Token Security",
+        "Rate Limiting",
+        "SQL Injection Prevention",
+        "CORS Configuration"
+      ],
+      "techniques": [
+        "Penetration testing",
+        "Security code review",
+        "Load testing",
+        "Cross-origin request testing"
+      ],
+      "output_format": "vulnerability_list"
+    },
+    "validation_confidence": 1.0,
+    "tasks": [
+      {
+        "task": "Analyze POST /api/v1/users/login for authentication vulnerabilities. Consider JWT issues, rate limiting, and brute force attacks.",
+        "response_length": 3815,
+        "quality_score": 1.0,
+        "depth": "deep",
+        "actionability": "high",
+        "uses_specialized_tools": true,
+        "response_preview": "### Analysis Report for POST /api/v1/users/login Endpoint\n\n#### Overview\nThe `/api/v1/users/login` endpoint is responsible for authenticating users by accepting credentials and returning a JWT token u"
+      },
+      {
+        "task": "Audit POST /api/v1/orders for authorization and data validation issues.",
+        "response_length": 4093,
+        "quality_score": 1.0,
+        "depth": "deep",
+        "actionability": "high",
+        "uses_specialized_tools": true,
+        "response_preview": "### API Security Audit Report: POST /api/v1/orders\n\n#### Objective\nThe aim of this audit is to evaluate the security mechanisms in place for the POST /api/v1/orders endpoint, focusing on JWT token sec"
+      },
+      {
+        "task": "Review GET /api/v1/products for SQL injection risks.",
+        "response_length": 3527,
+        "quality_score": 1.0,
+        "depth": "deep",
+        "actionability": "high",
+        "uses_specialized_tools": true,
+        "response_preview": "### Detailed Analysis Report: SQL Injection Risks in GET /api/v1/products\n\n#### Overview\n\nThe GET /api/v1/products endpoint is used to retrieve product data from the system. This endpoint may be susce"
+      }
+    ]
+  },
+  "comparison": {
+    "quality_before": 1.0,
+    "quality_after": 1.0,
+    "quality_improvement": 0.0,
+    "quality_improvement_pct": 0.0,
+    "depth_before_chars": 3310,
+    "depth_after_chars": 3811,
+    "depth_increase": 501,
+    "actionability_before_high": 2,
+    "actionability_after_high": 3
+  }
+}
