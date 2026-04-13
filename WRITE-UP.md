@@ -1,7 +1,7 @@
 # Stem Agent Challenge: Write-up Report
 
 **Author:** Nikolа Borisov  
-**Date:** April 12, 2026  
+**Date:** April 13, 2026  
 **Domain:** Web API Security Auditing  
 **Status:** Production-Ready
 
@@ -33,7 +33,7 @@ I chose **Web API Security Auditing** because:
 - Objective evaluation criteria (can compare generalist vs specialist performance)
 - Practical relevance (API security is critical infrastructure concern)
 - Natural progression of specialization (generic LLM → security expert)
-- I have a lot of intrest in web security personally
+- I have a lot of interest in web security personally
 - Most of the classes I took at my university are related to web development
 
 ### 1.2 Design Philosophy: Safety-First Specialization
