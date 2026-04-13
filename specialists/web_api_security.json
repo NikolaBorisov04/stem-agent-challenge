@@ -8,19 +8,18 @@
     "auth_analyzer"
   ],
   "focus_areas": [
-    "SQL injection vulnerability",
-    "JWT token expiration logic and claims",
-    "Rate limiting implementation",
-    "CORS configuration validation",
-    "Authorization checks on endpoints"
+    "Database security with emphasis on SQL injection",
+    "JWT authentication and token management",
+    "Effective rate limiting implementation",
+    "CORS policy enforcement",
+    "Authorization checks on sensitive endpoints"
   ],
   "techniques": [
-    "Penetration testing",
-    "Static code analysis",
-    "Dynamic analysis",
-    "Fuzz testing",
-    "Unit and integration testing",
-    "Manual code review"
+    "Conducting SQL injection tests using automated tools and manual code review",
+    "Validating JWT token expiration and signature verification",
+    "Simulating high request volumes to test rate limiting",
+    "Testing CORS configurations with various allowed and disallowed origins",
+    "Performing role-based access control tests to ensure proper authorization"
   ],
   "output_format": "vulnerability_list"
 }

@@ -224,31 +224,6 @@ Agent automatically derived this without templates or hand-configuration.
 
 ---
 
-## 📝 For JetBrains Reviewers
-
-**Quick 5-minute look:**
-1. Run `python main.py` - see it work end-to-end
-2. Check `specialists/web_api_security.json` - see generated config
-
-**Quick 15-minute review:**
-1. Read `README.md` - understand the problem
-2. Review `core/stem_agent.py` - see main logic
-3. Check test results - verify all pass
-
-**Detailed 30-minute review:**
-1. Read `REPORT.md` sections 1-2 - approach and experiments
-2. Review `evaluation/BEFORE_AFTER_RESULTS.md` - see measured improvements  
-3. Check `core/safeguards.py` - understand validation
-4. Review test cases - see diversity
-
-**Complete understanding (1 hour):**
-1. Read all documentation
-2. Review all code
-3. Run all tests and evaluations
-4. Understand the 5-stage pipeline
-
----
-
 ## ✨ What This Demonstrates
 
 ### Software Engineering
@@ -305,5 +280,5 @@ See the relevant documentation:
 ---
 
 **Stem Agent Challenge - Complete Submission**  
-*Submitted: 2026-04-12*  
+*Submitted: 2026-04-13*  
 *Status: Production-Ready ✅*
